@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Create Events{% endblock %}
+
+{% block content %}
+<div class="col-md-9">
+<form action="{{url_for('views.create')}}" method="post" enctype="multipart/form-data">
+    <div class="text-center mt-6 name">
+        <h2 class="text-uppercase">Create New Events</h2>
+    </div>
+    <div class="form-floating mb-3">
+      <label for="floatingInput">Event Heading</label>
+      <input type="text" name="heading" class="form-control" id="floatingInput" required>
+    </div>
+    <div class="form-floating">
+      <label for="floatingTextarea2">Description</label>
+      <textarea class="form-control" name="description" id="floatingTextarea2" style="height: 100px" required></textarea>
+    </div>
+    <button class="btn btn-primary mt-3">Submit</button>
+
+
+</form>
+</div>
+{% endblock %}
